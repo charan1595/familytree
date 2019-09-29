@@ -39,3 +39,13 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    doFirst {
+        manifest {
+            attributes (
+                    'Main-Class': mainClassName
+            )
+        }
+    }
+}
+

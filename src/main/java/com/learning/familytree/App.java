@@ -18,9 +18,7 @@ public class App {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for(;;) {
             String line = reader.readLine();
-            if(line!=null && line!="") {
-                processor.parseCommand(line);
-            }
+            processor.parseCommand(line);
         }
     }
 }

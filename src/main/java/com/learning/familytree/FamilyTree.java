@@ -19,9 +19,9 @@ public class FamilyTree {
 
     @CommandRegex("family-tree\\s+add\\s+person\\s+([\\w\\s]+)\\s+([M|F])\\s*")
     public Person addPerson(String name, String gender) {
-        System.out.println("adding person "+name);
         Person person =personMap.get(name);
         if(person==null) {
+            System.out.println("adding person "+name);
             person = new Person(name, gender.equals("M")? Person.Gender.MALE : Person.Gender.FEMALE);
             personMap.put(name,person);
         }
